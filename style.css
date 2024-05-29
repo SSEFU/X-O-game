@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    background-color: rgba(30, 0, 255, 0.041);
+}
+
+.game {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 405px;
+    height: 443px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    font-weight: 500;
+    position: absolute;
+    bottom: 2;
+    box-shadow: 10px 10px 10px 0 black;
+}
+
+.title {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    padding: 5px;
+    margin: 5px;
+}
+
+span {
+    color: rgb(207, 228, 19);
+}
+
+.square {
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    background: rgb(255, 255, 255);
+    background:  rgba(2, 152, 252, 0.222);
+    float: left;
+    margin: 2px;
+    font-size: 80px;
+    transition: 0.3s;
+}
+
+.square:hover {
+    cursor: pointer;
+    background: #000;
+    transform: scale(1.1);
+}
+
+.winner {
+    animation: winnerAnimation 1s infinite;
+}
+
+@keyframes winnerAnimation {
+    0%, 100% { background-color: green; }
+    50% { background-color: rgb(0, 248, 33); }
+}
